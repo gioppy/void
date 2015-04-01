@@ -1,0 +1,5 @@
+# If you have installed google_webfont_loader_api use this file to nitify the fonts on the module
+
+name = "Void"
+# custom_families[] = FontName
+# custom_style_css[] = fonts.css
