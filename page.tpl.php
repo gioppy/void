@@ -72,3 +72,14 @@
  * @ingroup themeable
  */
 ?>
+
+<?php
+  //Uncomment this line if you have hidden $page['content'] for front page
+  //render($page['content']['metatags']);
+?>
+
+<?php //Use this code if you want to hide the tabs on unregistered users ?>
+<?php if ($tabs && (!empty($tabs['#primary']) || !empty($tabs['#secondary']))): ?><div id="tabs-wrapper"><?php print render($tabs); ?></div><?php endif; ?>
+
+<?php //Remeber to always print $page['content'], otherwise your page will blank! ?>
+<?php print render($page['content']); ?>
