@@ -1,14 +1,13 @@
-name = Garland
-description = A multi-column theme which can be configured to modify colors and switch between fixed and fluid width layouts.
+name = Void (modify as your needed)
+description = Insert a template descrition
 package = Core
-version = VERSION
 core = 7.x
-stylesheets[all][] = style.css
-stylesheets[print][] = print.css
-settings[garland_width] = fluid
 
-; Information added by Drupal.org packaging script on 2015-03-18
-version = "7.35"
-project = "drupal"
-datestamp = "1426707463"
+# Uncomment to add CSS
+# stylesheets[all][] = style.css
 
+# Uncomment to add JS
+# scripts[] = js/scripts.js
+
+# Uncomment to customize the regions. Remeber to always insert regions[content]
+# regions[content] = Content
