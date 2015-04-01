@@ -1,0 +1,65 @@
+/*TABS*/
+
+#tabs-wrapper{
+  margin:21px auto;
+  font-size:1.1em;
+  text-transform:uppercase;
+  
+  ul{
+    display:block;
+    height:18px;
+    border-bottom:1px solid #000;
+    padding:8px 33px;
+  }
+  
+  li{
+    margin:0 15px 0 0;
+    display:block;
+    float:left;
+    
+    &.active a{
+      padding-bottom:10px;
+      color:#000;
+      border-bottom-color:#fff;
+    }
+  }
+  
+  a{
+    background:#fff;
+    color:#000;
+    border-width:1px;
+    border-style:solid;
+    border-color:#000 #000 transparent #000;
+    padding:9px;
+    margin:0;
+    
+    &:hover,
+    &:focus{
+      padding-bottom:10px;
+      color:#000;
+      border-bottom-color:#fff;
+    }
+  }
+}
+
+/*MESSAGES*/
+
+#messages{
+  width:855px;
+  margin:0 0 24px 0;
+  padding:24px 0;
+  position:relative;
+}
+
+div.status,
+div.error,
+div.warning{
+  background-image:none;
+  border:none;
+  margin:0;
+  padding:0 30px;
+}
+
+div.status:before{}
+div.warning:before{}
+div.error:before{}
