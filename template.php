@@ -11,18 +11,18 @@ function void_css_alter(&$css){
   unset($css[drupal_get_path('module', 'field') . '/theme/field.css']);
   unset($css[drupal_get_path('module', 'node') . '/node.css']);
   unset($css[drupal_get_path('module', 'user') . '/user.css']);
-  
+
   //Uncomment if search module is enabled
   //unset($css[drupal_get_path('module', 'search') . '/search.css']);
-  
+
   unset($css[drupal_get_path('module', 'ctools') . '/css/ctools.css']);
   unset($css[drupal_get_path('module', 'views') . '/css/views.css']);
-  
+
   unset($css[drupal_get_path('module', 'ckeditor') . '/css/ckeditor.css']);
-  
+
   //Uncomment if webform module is enabled
   //unset($css[drupal_get_path('module', 'webform') . '/css/webform.css']);
-  
+
   //Uncomment if date module is enabled
   //unset($css[drupal_get_path('module', 'date_api') . '/date.css']);
   //unset($css[drupal_get_path('module', 'date_popup') . '/themes/datepicker.1.7.css']);
@@ -33,10 +33,8 @@ function void_css_alter(&$css){
  */
 function void_html_head_alter(&$head_elements){
   //Misc meta-tags
-  $head_elements['HandheldFriendly'] = _add_meta('HandheldFriendly', 'true');
   $head_elements['format-detection'] = _add_meta('format-detection', 'telephone=no');
-  $head_elements['viewport'] = _add_meta('viewport', 'width=device-width, initial-scale=1, minimal-ui');
-  
+
   $head_elements['system_meta_content_type']['#attributes'] = array(
     'charset' => 'utf-8'
   );
@@ -72,7 +70,7 @@ function void_preprocess_page(&$vars){
     ),
   );
   drupal_add_html_head($html5, 'html5');*/
-  
+
   //Uncomment for add AddThis js on head
   /*$addthis = array(
     '#tag' => 'script',
@@ -86,10 +84,10 @@ function void_preprocess_page(&$vars){
     ),
   );
   drupal_add_html_head($addthis, 'addthis');*/
-  
+
   //Insert css/js if is front page
   if(drupal_is_front_page()){}
-  
+
   //Insert css/js on specific node
   if(isset($vars['node'])){
     $node = $vars['node'];
