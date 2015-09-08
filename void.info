@@ -4,10 +4,10 @@ package = Core
 core = 7.x
 
 # Uncomment to add CSS
-# stylesheets[all][] = style.css
+# stylesheets[all][] = assets/styles/style.css
 
 # Uncomment to add JS
-# scripts[] = js/scripts.js
+# scripts[] = assets/scripts/scripts.js
 
 # Uncomment to customize the regions. Remeber to always insert regions[content]
 # regions[content] = Content
