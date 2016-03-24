@@ -56,21 +56,6 @@ function void_preprocess_html(&$vars){}
  * Override or insert variables into the page template.
  */
 function void_preprocess_page(&$vars){
-  //Uncomment for add html5shiv js on head. Remember to change the path in the src
-  /*$html5 = array(
-    '#tag' => 'script',
-    '#prefix' => '<!--[if lt IE 9]>',
-    '#suffix' => '<![endif]-->',
-    '#value_prefix' => '',
-    '#value'=>'',
-    '#value_suffix' => '',
-    '#attributes' => array(
-      'type' => 'text/javascript',
-      'src' => drupal_get_path('theme', 'void') .'/js/html5shiv.min.js',
-    ),
-  );
-  drupal_add_html_head($html5, 'html5');*/
-
   //Uncomment for add AddThis js on head
   /*$addthis = array(
     '#tag' => 'script',
@@ -91,6 +76,17 @@ function void_preprocess_page(&$vars){
   //Insert css/js on specific node
   if(isset($vars['node'])){
     $node = $vars['node'];
+  }
+}
+
+/**
+ * implement template_preprocess_views_view().
+ */
+function void_preprocess_views_view(&$vars){
+  $view = $vars['view'];
+
+  switch($view->name){
+    
   }
 }
 
