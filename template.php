@@ -38,6 +38,13 @@ function void_html_head_alter(&$head_elements){
   $head_elements['system_meta_content_type']['#attributes'] = array(
     'charset' => 'utf-8'
   );
+
+  //Remove RSS feed if not needed
+  foreach($head_elements as $key => $element){
+    if(strpos($key, 'drupal_add_html_head_link:alternate:') === 0 && isset($element['#attributes']['type']) && $element['#attributes']['type'] == 'application/rss+xml'){
+        unset($head_elements[$key]);
+    }
+  }
 }
 
 /**
